@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudar Texto</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="divultra">
+    <h1 id="titulo">Bem-vindo!</h1>
+    <button id="botaomudartexto">Clique aqui</button>
+
+    <script>
+        const titulo = document.getElementById('titulo');
+        const botaoMudarTexto = document.getElementById('botaomudartexto');
+
+        botaoMudarTexto.addEventListener('click', () => {
+            titulo.innerText = 'Você clicou!-!WOW';
+        });
+    </script>
+</div>
+
+
+<div class="divultra">
+<label for="camponome">Digite seu nome:</label>
+    <input type="text" id="camponome">
+    <button id="botaoenviar">Enviar</button>
+    
+    <p id="mensagemsaudacao"></p>
+
+    <script>
+        const campoNome = document.getElementById('camponome');
+        const botaoEnviar = document.getElementById('botaoenviar');
+        const mensagemSaudacao = document.getElementById('mensagemsaudacao');
+
+        botaoEnviar.addEventListener('click', () => {
+            const nomeDigitado = campoNome.value;
+            
+            if (nomeDigitado) {
+                mensagemSaudacao.innerText = `Olá, ${nomeDigitado}!`;
+            } else {
+                mensagemSaudacao.innerText = 'digite seu nome.';
+            }
+        });
+    </script>
+
+</div>
+
+<div class="divultra">
+
+<div id="caixacor"></div>
+    <button id="botaomudarcor">MudarCor</button>
+
+    <script>
+        const caixaCor = document.getElementById('caixacor');
+        const botaoMudarCor = document.getElementById('botaomudarcor');
+
+        botaoMudarCor.addEventListener('click', () => {
+            caixaCor.style.backgroundColor = 'red';
+        });
+    </script>
+
+</div>
+</body>
+</html>
